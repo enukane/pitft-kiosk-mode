@@ -16,10 +16,13 @@ EOS
 
 chmod +x /usr/sbin/pitft-kiosk-start
 
-cat << EOS >> $PROFILE_PATH
+cat << 'EOS' >> $PROFILE_PATH
 
 f [ $TERM = "linux" ]; then
 	# pitft := "linux", ssh := "vt100"
+EOS
+
+cat << EOS >> $PROFILE_PATH
 	xinit $BIN_TARGET
 fi
 EOS
