@@ -18,7 +18,7 @@ chmod +x /usr/sbin/pitft-kiosk-start
 
 cat << 'EOS' >> $PROFILE_PATH
 
-f [ $TERM = "linux" ]; then
+if [ $TERM = "linux" ]; then
 	# pitft := "linux", ssh := "vt100"
 EOS
 
